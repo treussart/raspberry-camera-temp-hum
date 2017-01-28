@@ -47,7 +47,7 @@ Install Motion :
 > - height 576
 > - framerate 15
 > - threshold 4000
-> - lightswitch 0 ou 100
+> - lightswitch 100
 > - minimum_motion_frames 1
 > - output_pictures off
 > - ffmpeg_output_movies on
@@ -57,6 +57,9 @@ Install Motion :
 > - stream_localhost off
 > - #sdl_threadnr 0
 > - movie_filename %Y%m%d%H%M%S-%v
+
+(Optional - Problem with the change in brightness due to clouds)
+> - on_movie_start python3 ~/cron/motionCamera.py
 
 Edit the cron, example :
 
