@@ -24,7 +24,7 @@ Edit the cron, example :
     crontab -e
 Add :
 
-    0 * * * * python ~/raspberry-camera-temp-hum/cron/sendTempHumToDomoticz.py
+    0 * * * * python3 ~/raspberry-camera-temp-hum/cron/sendTempHumToDomoticz.py
 
 [1]: https://www.python.org/downloads/
 [2]: https://github.com/domoticz/domoticz
