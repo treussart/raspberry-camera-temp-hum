@@ -32,6 +32,31 @@ Install Adafruit Python Library :
     cd Adafruit_Python_DHT 
     sudo python setup.py install 
 
+Install Motion :
+
+    sudo apt-get install motion libav-tools
+    sudo modprobe bcm2835-v4l2
+    sudo echo 'sudo modprobe bcm2835-v4l2' >> /etc/rc.local  
+    sudo touch /tmp/motion.log
+    sudo chmod 775 /tmp/motion.log
+
+    sudo nano /etc/motion/motion.conf
+    
+> - Log /home/matthieu/camera/motion.log
+> -  width 1080
+> - height 576
+> - framerate 15
+> - threshold 4000
+> - lightswitch 0 ou 100
+> - minimum_motion_frames 1
+> - output_pictures off
+> - ffmpeg_output_movies on
+> - ffmpeg_video_codec mpeg4
+> - target_dir ~/camera
+> - stream_port 8081
+> - stream_localhost off
+> - #sdl_threadnr 0
+> - movie_filename %Y%m%d%H%M%S-%v
 
 Edit the cron, example :
 
