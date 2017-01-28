@@ -26,7 +26,7 @@ Create a Virtual Sensors in Domoticz :
 
 Install Adafruit Python Library :
 
-    sudo apt-get install rpi.gpio git build-essential python-dev   
+    sudo apt install rpi.gpio git build-essential python-dev   
     cd ~/
     git clone https://github.com/adafruit/Adafruit_Python_DHT.git  
     cd Adafruit_Python_DHT 
