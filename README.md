@@ -18,8 +18,9 @@ Installation
 
 **Domoticz**
 
-Create a Virtual Sensors in Domoticz :
+Create Virtual Sensors in Domoticz :
 * a subType Temp + Humidity.
+* (Optional) a subType Alert.
 
 
 **Raspberry Pi**
