@@ -16,8 +16,20 @@ Requirements
 Installation
 -------------
 
+**Domoticz**
 Create a Virtual Sensors in Domoticz :
 * a subType Temp + Humidity.
+
+
+**Raspberry Pi**
+Install Adafruit Python Library :
+
+    sudo apt-get install rpi.gpio git build-essential python-dev   
+    cd ~/
+    git clone https://github.com/adafruit/Adafruit_Python_DHT.git  
+    cd Adafruit_Python_DHT 
+    sudo python setup.py install 
+
 
 Edit the cron, example :
 
@@ -25,6 +37,7 @@ Edit the cron, example :
 Add :
 
     0 * * * * python3 ~/raspberry-camera-temp-hum/cron/sendTempHumToDomoticz.py
+    0 0 * * 0 sh ~/raspberry-camera-temp-hum/cron/eraseCameraFiles.sh 
 
 [1]: https://www.python.org/downloads/
 [2]: https://github.com/domoticz/domoticz
