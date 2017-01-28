@@ -59,7 +59,7 @@ Install Motion :
 > - movie_filename %Y%m%d%H%M%S-%v
 
 (Optional - Problem with the change in brightness due to clouds)
-> - on_movie_start python3 ~/cron/motionCamera.py
+> - on_movie_start python3 ~/raspberry-camera-temp-hum/cron/motionCamera.py
 
 Edit the cron, example :
 
