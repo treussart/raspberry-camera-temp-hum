@@ -42,7 +42,7 @@ Install Motion :
 
     sudo nano /etc/motion/motion.conf
     
-> - Log /home/matthieu/camera/motion.log
+> - Log ~/camera/motion.log
 > -  width 1080
 > - height 576
 > - framerate 15
