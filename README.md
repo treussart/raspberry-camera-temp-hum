@@ -8,8 +8,8 @@ Requirements
 * [Python3][1].
 * [Domoticz][2].
 * [Am2302 sensor][3].
-* [Camera module][4].
 * [Raspberry Pi][5].
+* [Raspberry Pi Camera module][4].
 * [Raspberry Pi Camera Box Bundle][5].
 
 Installation
