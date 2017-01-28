@@ -73,7 +73,7 @@ Edit settings :
 Start Motion :
 
     mkdir ~/camera
-    sudo chown motion ~/camera
+    sudo chown motion ~/camera
     sudo service motion start
 
 Edit the cron, example :
