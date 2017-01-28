@@ -41,6 +41,13 @@ Install Motion :
     sudo touch /tmp/motion.log
     sudo chmod 775 /tmp/motion.log
 
+    sudo nano /etc/default/motion 
+
+> - start_motion_daemon=yes
+
+
+Edit settings :
+
     sudo nano /etc/motion/motion.conf
     
 > - Log ~/camera/motion.log
@@ -61,6 +68,13 @@ Install Motion :
 
 (Optional - Problem with the change in brightness due to clouds)
 > - on_movie_start python3 ~/raspberry-camera-temp-hum/motionCamera.py
+
+
+Start Motion :
+
+    mkdir ~/camera
+    sudo chown motion ~/camera
+    sudo service motion start
 
 Edit the cron, example :
 
