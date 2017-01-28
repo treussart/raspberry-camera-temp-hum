@@ -10,7 +10,8 @@ Requirements
 * [Am2302 sensor][3].
 * [Raspberry Pi][5].
 * [Raspberry Pi Camera module][4].
-* [Raspberry Pi Camera Box Bundle][5].
+* [Raspberry Pi Camera Box Bundle][6].
+* (Optional)[Breadboarding wire][7].
 
 Installation
 -------------
@@ -31,3 +32,4 @@ Add :
 [4]: https://www.adafruit.com/products/3099
 [5]: https://www.adafruit.com/products/3055
 [6]: https://www.modmypi.com/raspberry-pi/cases/modmypi-camera-boxes/nwazet-pi-camera-box-bundle-case,-lens-and-wall-mount-b-plus
+[7]: https://www.adafruit.com/products/153
