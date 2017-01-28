@@ -17,11 +17,13 @@ Installation
 -------------
 
 **Domoticz**
+
 Create a Virtual Sensors in Domoticz :
 * a subType Temp + Humidity.
 
 
 **Raspberry Pi**
+
 Install Adafruit Python Library :
 
     sudo apt-get install rpi.gpio git build-essential python-dev   
