@@ -70,6 +70,12 @@ Add :
     0 * * * * python3 ~/raspberry-camera-temp-hum/cron/sendTempHumToDomoticz.py
     0 0 * * 0 sh ~/raspberry-camera-temp-hum/cron/eraseCameraFiles.sh 
 
+
+Finished assembly :
+
+![alt tag](https://github.com/matleses/raspberry-camera-temp-hum/blob/master/images/camera.png)
+
+
 [1]: https://www.python.org/downloads/
 [2]: https://github.com/domoticz/domoticz
 [3]: https://www.adafruit.com/product/393
