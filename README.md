@@ -9,6 +9,7 @@ Requirements
 * [Domoticz][2].
 * [Am2302 sensor][3].
 * [Camera module][4].
+* [Raspberry Pi][5].
 
 Installation
 -------------
@@ -27,3 +28,4 @@ Add :
 [2]: https://github.com/domoticz/domoticz
 [3]: https://www.adafruit.com/product/393
 [4]: https://www.adafruit.com/products/3099
+[5]: https://www.adafruit.com/products/3055
