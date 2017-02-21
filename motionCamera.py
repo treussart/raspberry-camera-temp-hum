@@ -23,5 +23,5 @@ def sendToDomoticz(host, port, idx, value, level):
     urllib.request.urlopen(url)
 
 
-sendToDomoticz(host, port, idx, value, 4);
+sendToDomoticz(host, port, idx, value, 4)
 sys.exit(0)

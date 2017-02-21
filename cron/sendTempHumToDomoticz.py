@@ -20,22 +20,25 @@ idx = args.idx
 sensor = args.sensor
 pin = args.pin
 
+
 def getTempHum(sensor, pin):
-	sensor_args = { '11': Adafruit_DHT.DHT11,
-                	'22': Adafruit_DHT.DHT22,
-                	'2302': Adafruit_DHT.AM2302 }
-	sensor = sensor_args[sensor]
-	humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
-	return humidity, temperature
+    sensor_args = {'11': Adafruit_DHT.DHT11,
+                    '22': Adafruit_DHT.DHT22,
+                    '2302': Adafruit_DHT.AM2302}
+    sensor = sensor_args[sensor]
+    humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+    return humidity, temperature
+
 
 def sendToDomoticz(host, port, idx, temperature, humidity):
-	if humidity is not None and temperature is not None:
-    	url = 'http://' + str(host) + ':' + str(port) +'/json.htm?type=command&param=udevice&idx=' + str(idx) + '&nvalue=0&svalue=' + quote(str("{0:.2f}".format(temperature))) + ';' + quote(str("{0:.2f}".format(humidity))) + ';0'
-    	urllib.request.urlopen(url)
-	else:
-    	print 'Failed to send to domoticz. Try again!'
-    	sys.exit(1)
+    if humidity is not None and temperature is not None:
+        url = 'http://' + str(host) + ':' + str(port) + '/json.htm?type=command&param=udevice&idx=' + str(idx) + '&nvalue=0&svalue=' + quote(str("{0:.2f}".format(temperature))) + ';' + quote(str("{0:.2f}".format(humidity))) + ';0'
+        urllib.request.urlopen(url)
+    else:
+        print('Failed to send to domoticz. Try again!')
+        sys.exit(1)
+
 
 humidity, temperature = getTempHum(sensor, pin)
-sendToDomoticz(host, port, idx, temperature, humidity);
+sendToDomoticz(host, port, idx, temperature, humidity)
 sys.exit(0)
