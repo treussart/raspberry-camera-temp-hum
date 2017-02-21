@@ -41,6 +41,13 @@ Install Motion :
     sudo touch /tmp/motion.log
     sudo chmod 775 /tmp/motion.log
 
+    sudo nano /etc/default/motion 
+
+> - start_motion_daemon=yes
+
+
+Edit settings :
+
     sudo nano /etc/motion/motion.conf
     
 > - Log ~/camera/motion.log
@@ -62,6 +69,13 @@ Install Motion :
 (Optional - Problem with the change in brightness due to clouds)
 > - on_movie_start python3 ~/raspberry-camera-temp-hum/motionCamera.py
 
+
+Start Motion :
+
+    mkdir ~/camera
+    sudo chown motion ~/camera
+    sudo service motion start
+
 Edit the cron, example :
 
     crontab -e
@@ -69,6 +83,12 @@ Add :
 
     0 * * * * python3 ~/raspberry-camera-temp-hum/cron/sendTempHumToDomoticz.py
     0 0 * * 0 sh ~/raspberry-camera-temp-hum/cron/eraseCameraFiles.sh 
+
+
+Finished assembly :
+
+![alt tag](https://github.com/matleses/raspberry-camera-temp-hum/blob/master/images/camera.png)
+
 
 [1]: https://www.python.org/downloads/
 [2]: https://github.com/domoticz/domoticz
