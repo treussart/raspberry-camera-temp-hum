@@ -5,7 +5,8 @@ Use a Raspberry Pi with a camera module and a am2302 sensor
 
 Requirements
 -------------
-* [Python3][1].
+* [Python][1].
+* [PycURL][8].
 * [Domoticz][2].
 * [Am2302 sensor][3].
 * [Raspberry Pi][5].
@@ -81,7 +82,7 @@ Edit the cron, example :
     crontab -e
 Add :
 
-    0 * * * * python3 ~/raspberry-camera-temp-hum/cron/sendTempHumToDomoticz.py
+    0 * * * * python ~/raspberry-camera-temp-hum/cron/sendTempHumToDomoticz.py
     0 0 * * 0 sh ~/raspberry-camera-temp-hum/cron/eraseCameraFiles.sh 
 
 
@@ -97,3 +98,4 @@ Finished assembly :
 [5]: https://www.adafruit.com/products/3055
 [6]: https://www.modmypi.com/raspberry-pi/cases/modmypi-camera-boxes/nwazet-pi-camera-box-bundle-case,-lens-and-wall-mount-b-plus
 [7]: https://www.adafruit.com/products/153
+[8]: http://pycurl.io/
