@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 # coding: utf8
-from urllib.parse import quote
-import urllib.request
+import pycurl
 import Adafruit_DHT
 import sys
 import argparse
@@ -32,8 +31,12 @@ def getTempHum(sensor, pin):
 
 def sendToDomoticz(host, port, idx, temperature, humidity):
     if humidity is not None and temperature is not None:
-        url = 'http://' + str(host) + ':' + str(port) + '/json.htm?type=command&param=udevice&idx=' + str(idx) + '&nvalue=0&svalue=' + quote(str("{0:.2f}".format(temperature))) + ';' + quote(str("{0:.2f}".format(humidity))) + ';0'
-        urllib.request.urlopen(url)
+        c = pycurl.Curl()
+        url = 'http://' + str(host) + ':' + str(port) + '/json.htm?type=command&param=udevice&idx=' + str(idx) + '&nvalue=0&svalue=' + str("{0:.2f}".format(temperature)) + ';' + str("{0:.2f}".format(humidity)) + ';0'
+        c.setopt(c.URL, url)
+        c.perform()
+        c.close()
+        sys.exit(0)
     else:
         print('Failed to send to domoticz. Try again!')
         sys.exit(1)
