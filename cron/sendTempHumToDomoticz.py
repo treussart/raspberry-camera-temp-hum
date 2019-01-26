@@ -32,8 +32,8 @@ def getTempHum(sensor, pin):
 def sendToDomoticz(host, port, idx, temperature, humidity):
     if humidity is not None and temperature is not None:
         c = pycurl.Curl()
-        url = 'http://' + str(host) + ':' + str(port) + '/json.htm?type=command&param=udevice&idx=' + str(idx) + '&nvalue=0&svalue='\
-        + str("{0:.2f}".format(temperature)) + ';' + str("{0:.2f}".format(humidity)) + ';0'
+        url = 'http://' + str(host) + ':' + str(port) + '/json.htm?type=command&param=udevice&idx=' + str(idx) + \
+              '&nvalue=0&svalue=' + str("{0:.2f}".format(temperature)) + ';' + str("{0:.2f}".format(humidity)) + ';0'
         c.setopt(c.URL, url)
         c.perform()
         c.close()
