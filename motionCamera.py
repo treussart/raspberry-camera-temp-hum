@@ -20,7 +20,7 @@ value = args.message
 
 def sendToDomoticz(host, port, idx, value, level):
     url = 'http://' + host + ':' + port + '/json.htm?type=command&param=udevice&idx=' + str(idx) + '&nvalue=' + \
-    str(level) + '&svalue=' + quote(value.encode('utf8'))
+          str(level) + '&svalue=' + quote(value.encode('utf8'))
     urllib.request.urlopen(url)
 
 
